@@ -1,0 +1,22 @@
+PODS:
+  - SDWebImage (5.4.1):
+    - SDWebImage/Core (= 5.4.1)
+  - SDWebImage/Core (5.4.1)
+  - YoutubePlayer-in-WKWebView (0.3.4)
+
+DEPENDENCIES:
+  - SDWebImage
+  - YoutubePlayer-in-WKWebView
+
+SPEC REPOS:
+  trunk:
+    - SDWebImage
+    - YoutubePlayer-in-WKWebView
+
+SPEC CHECKSUMS:
+  SDWebImage: 29c340dbdcef342bb13125553f4e19ce056b07a7
+  YoutubePlayer-in-WKWebView: af2f5929fc78882d94bfdfeea999b661b78d9717
+
+PODFILE CHECKSUM: 921c31b1f262eee3ca99aadac125fae0fa008409
+
+COCOAPODS: 1.8.4

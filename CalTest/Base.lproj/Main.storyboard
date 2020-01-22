@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ukv-2s-ZME">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PlayListController-->
+        <scene sceneID="WGX-Hg-LkZ">
+            <objects>
+                <tableViewController restorationIdentifier="PlayListController" storyboardIdentifier="PlayListController" title="PlayListController" id="5n6-Tt-dxi" customClass="PlayListController" customModule="CalTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cml-gW-Nup">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SongCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="120" id="KKN-h1-KL5" customClass="SongCell" customModule="CalTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KKN-h1-KL5" id="sVN-qj-6Ue">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q31-fN-O09">
+                                            <rect key="frame" x="20" y="11" width="150" height="98"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="tTL-gh-kVF"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hy5-V1-SYZ">
+                                            <rect key="frame" x="178" y="11" width="216" height="98"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Q31-fN-O09" firstAttribute="leading" secondItem="sVN-qj-6Ue" secondAttribute="leadingMargin" id="6Pc-4X-EIc"/>
+                                        <constraint firstItem="hy5-V1-SYZ" firstAttribute="trailing" secondItem="sVN-qj-6Ue" secondAttribute="trailingMargin" id="KLE-Te-vAf"/>
+                                        <constraint firstItem="hy5-V1-SYZ" firstAttribute="bottom" secondItem="sVN-qj-6Ue" secondAttribute="bottomMargin" id="PZH-Ft-Z2R"/>
+                                        <constraint firstItem="Q31-fN-O09" firstAttribute="top" secondItem="sVN-qj-6Ue" secondAttribute="topMargin" id="QLe-5q-OAo"/>
+                                        <constraint firstItem="hy5-V1-SYZ" firstAttribute="leading" secondItem="Q31-fN-O09" secondAttribute="trailing" constant="8" id="VcD-Lw-dYo"/>
+                                        <constraint firstItem="Q31-fN-O09" firstAttribute="bottom" secondItem="sVN-qj-6Ue" secondAttribute="bottomMargin" id="isd-hV-aH9"/>
+                                        <constraint firstItem="hy5-V1-SYZ" firstAttribute="top" secondItem="sVN-qj-6Ue" secondAttribute="topMargin" id="lxg-Sp-TqQ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="songImage" destination="Q31-fN-O09" id="jWX-51-v1P"/>
+                                    <outlet property="songTitle" destination="hy5-V1-SYZ" id="fAH-9N-5ID"/>
+                                    <segue destination="xz6-Ja-8uv" kind="show" id="CXK-c6-muf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5n6-Tt-dxi" id="Q7O-qn-rbq"/>
+                            <outlet property="delegate" destination="5n6-Tt-dxi" id="Wb3-eA-Ux4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Playlists" id="AFC-5m-qm7"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C62-Lv-KHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1088.4057971014493" y="115.84821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yeh-4k-v5C">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ukv-2s-ZME" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Isc-fv-OKF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5n6-Tt-dxi" kind="relationship" relationship="rootViewController" id="cPk-Ql-AGM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LJS-J5-BFZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="178.2608695652174" y="115.84821428571428"/>
+        </scene>
+        <!--SongController-->
+        <scene sceneID="kzt-Ty-MhD">
+            <objects>
+                <tableViewController restorationIdentifier="SongController" storyboardIdentifier="SongController" title="SongController" id="xz6-Ja-8uv" customClass="SongController" customModule="CalTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mwN-pm-tjG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SongCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="120" id="aF8-t2-PDC" customClass="SongCell" customModule="CalTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aF8-t2-PDC" id="jbg-qu-3qf">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="umX-1Q-6wy">
+                                            <rect key="frame" x="20" y="11" width="150" height="98"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="5El-tx-Tbg"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpD-Z1-frn">
+                                            <rect key="frame" x="178" y="11" width="216" height="98"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QpD-Z1-frn" firstAttribute="bottom" secondItem="jbg-qu-3qf" secondAttribute="bottomMargin" id="42b-3X-bkl"/>
+                                        <constraint firstItem="umX-1Q-6wy" firstAttribute="top" secondItem="jbg-qu-3qf" secondAttribute="topMargin" id="Ele-8N-sPE"/>
+                                        <constraint firstItem="QpD-Z1-frn" firstAttribute="leading" secondItem="umX-1Q-6wy" secondAttribute="trailing" constant="8" id="LCi-lJ-4Ue"/>
+                                        <constraint firstItem="umX-1Q-6wy" firstAttribute="bottom" secondItem="jbg-qu-3qf" secondAttribute="bottomMargin" id="ZyO-Ch-vMj"/>
+                                        <constraint firstItem="QpD-Z1-frn" firstAttribute="top" secondItem="jbg-qu-3qf" secondAttribute="topMargin" id="hJm-37-bpX"/>
+                                        <constraint firstItem="umX-1Q-6wy" firstAttribute="leading" secondItem="jbg-qu-3qf" secondAttribute="leadingMargin" id="oRP-Gt-JOZ"/>
+                                        <constraint firstItem="QpD-Z1-frn" firstAttribute="trailing" secondItem="jbg-qu-3qf" secondAttribute="trailingMargin" id="rhp-ka-NT4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="songImage" destination="umX-1Q-6wy" id="e7V-IJ-6WP"/>
+                                    <outlet property="songTitle" destination="QpD-Z1-frn" id="lH6-2S-ltM"/>
+                                    <segue destination="Hfq-IZ-eb2" kind="show" id="EAQ-4X-3cR"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xz6-Ja-8uv" id="3Ap-V7-zdH"/>
+                            <outlet property="delegate" destination="xz6-Ja-8uv" id="Tlb-BK-nUl"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Songs" id="38C-65-gFh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9bY-Sy-Jjo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1768" y="116"/>
+        </scene>
+        <!--PlayerController-->
+        <scene sceneID="D1e-dd-nH7">
+            <objects>
+                <viewController restorationIdentifier="PlayerController" storyboardIdentifier="PlayerController" title="PlayerController" id="Hfq-IZ-eb2" customClass="PlayerController" customModule="CalTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QGf-NG-J37">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SD6-f9-HgU" customClass="WKYTPlayerView">
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="w3a-22-Ofp" firstAttribute="trailing" secondItem="SD6-f9-HgU" secondAttribute="trailing" constant="20" id="Nbw-3n-CsH"/>
+                            <constraint firstItem="SD6-f9-HgU" firstAttribute="top" secondItem="w3a-22-Ofp" secondAttribute="top" id="UNS-jN-Jdx"/>
+                            <constraint firstItem="SD6-f9-HgU" firstAttribute="leading" secondItem="w3a-22-Ofp" secondAttribute="leading" constant="20" id="g6n-7V-jM7"/>
+                            <constraint firstItem="SD6-f9-HgU" firstAttribute="bottom" secondItem="w3a-22-Ofp" secondAttribute="bottom" id="m3i-20-b4R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w3a-22-Ofp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Player" id="TPA-VK-5Gk"/>
+                    <connections>
+                        <outlet property="playerView" destination="SD6-f9-HgU" id="egh-So-KPI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q3A-fA-b3n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2460.8695652173915" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+</document>
