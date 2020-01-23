@@ -1,5 +1,6 @@
 import UIKit
 
+//Cell used for playlists and songs tables
 class SongCell: UITableViewCell {
 
     @IBOutlet weak var songTitle: UILabel!

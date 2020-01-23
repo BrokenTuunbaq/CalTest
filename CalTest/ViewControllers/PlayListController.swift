@@ -1,8 +1,10 @@
 import UIKit
 import SDWebImage
 
+//Playlist ViewController class
 class PlayListController: UITableViewController, NetworkManagerDelegate {
-        
+       
+    //Init NetworkManager with playlist url
     var networkManager = NetworkManager(playListUrl: StringConstant.playListUrl)
 
     override func viewDidLoad() {
@@ -12,6 +14,7 @@ class PlayListController: UITableViewController, NetworkManagerDelegate {
         networkManager.requestPlayList()
     }
     
+    //Method called when playlist's received
     func receivedPlayList(playList: PlayList) {
         RuntimeStorage.playList = playList
         DispatchQueue.main.async {

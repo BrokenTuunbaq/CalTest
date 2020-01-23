@@ -148,15 +148,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SD6-f9-HgU" customClass="WKYTPlayerView">
-                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="w3a-22-Ofp" firstAttribute="trailing" secondItem="SD6-f9-HgU" secondAttribute="trailing" constant="20" id="Nbw-3n-CsH"/>
+                            <constraint firstItem="w3a-22-Ofp" firstAttribute="trailing" secondItem="SD6-f9-HgU" secondAttribute="trailing" id="Nbw-3n-CsH"/>
                             <constraint firstItem="SD6-f9-HgU" firstAttribute="top" secondItem="w3a-22-Ofp" secondAttribute="top" id="UNS-jN-Jdx"/>
-                            <constraint firstItem="SD6-f9-HgU" firstAttribute="leading" secondItem="w3a-22-Ofp" secondAttribute="leading" constant="20" id="g6n-7V-jM7"/>
+                            <constraint firstItem="SD6-f9-HgU" firstAttribute="leading" secondItem="w3a-22-Ofp" secondAttribute="leading" id="g6n-7V-jM7"/>
                             <constraint firstItem="SD6-f9-HgU" firstAttribute="bottom" secondItem="w3a-22-Ofp" secondAttribute="bottom" id="m3i-20-b4R"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="w3a-22-Ofp"/>

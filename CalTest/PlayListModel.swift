@@ -1,5 +1,6 @@
 import Foundation
 
+//Model of all json objects
 struct PlayList: Codable {
     let kind, etag: String
     let pageInfo: PageInfo

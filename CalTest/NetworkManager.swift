@@ -4,6 +4,7 @@ protocol NetworkManagerDelegate {
     func receivedPlayList(playList: PlayList)
 }
 
+//Network class responsible to receive data from request
 struct NetworkManager {
     
     let playListUrl: String
